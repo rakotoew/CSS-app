@@ -5,3 +5,8 @@
 .nav button{
   margin: 0 5em;
 }
+
+.nav button:hover{
+  transform: translate(2px, -2px);
+  transition: 0.3s;
+}

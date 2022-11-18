@@ -1,0 +1,17 @@
+.card{
+  margin: 1em 1em 1em 1em;
+  padding: 1em;
+  border: 1px solid var(--color-border);
+  border-radius: 1em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 20rem;
+  min-height: 15em;
+}
+
+.card:hover{
+  transform: translate(3px, -3px);
+  box-shadow: 0 4px 1em var(--color-border);
+  transition: 0.3s;
+}

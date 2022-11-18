@@ -9,13 +9,15 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { CardComponent} from "./components/card/card.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NotFoundComponent,
-    NavBarComponent
+    NavBarComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
