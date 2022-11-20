@@ -5,3 +5,13 @@
   justify-content: center;
   margin-top: 2em;
 }
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 15em;
+  max-height: 7.5em;
+  border-radius: 10px;
+}

@@ -1,0 +1,44 @@
+.snake {
+  --s: 2em; /* the size of the wave */
+  --b: 1em; /* the thickness of the line*/
+
+  height: calc(2*var(--s));
+  aspect-ratio: 2.5;
+  display: grid;
+  padding: 2em;
+  filter: blur(7px) contrast(20) hue-rotate(20deg);
+  mix-blend-mode: darken;
+  background: rgba(255, 255, 255, 0.76); /* change the percentage to make it more or less blury*/
+  height: 8em;
+}
+.snake::before{
+  content: "";
+  background: darkblue;
+  --_g: calc(-.4*var(--s)), #0000 calc(99% - var(--b)),#000 calc(101% - var(--b)) 99%,#0000 101%;
+  --_r: calc(1.2*var(--s) + var(--b)/2) at left 50%;
+
+  -webkit-mask:
+    radial-gradient(var(--_r) bottom var(--_g))
+    calc(50% - var(--s)) calc(50% - var(--s))/calc(4*var(--s)) calc(2*var(--s)),
+    radial-gradient(var(--_r) top    var(--_g))
+    calc(50% + var(--s)) calc(50% + var(--s))/calc(4*var(--s)) calc(2*var(--s));
+  animation: moving-snake 1s infinite linear;
+}
+@keyframes moving-snake {
+  to {
+    -webkit-mask-position:
+      calc(50% - 5*var(--s)) calc(50% - var(--s)),
+      calc(50% - 3*var(--s)) calc(50% + var(--s))
+  }
+}
+main {
+  margin: 0;
+  min-height: 50vh;
+  background: var(--vt-c-white-soft);
+  display: grid;
+  place-content: center;
+}
+h1,h2,h3,h4,h5{
+  padding: 1em;
+  text-align: center;
+}

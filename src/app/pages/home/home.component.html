@@ -2,36 +2,15 @@
   <h1>CSS Testing</h1>
   <h2>Made by Ewan Rakotoanosy</h2>
   <h3>Website on which I publish small pages and effect in CSS</h3>
-  <div class="list-container">
-    <a href="something">
-      <app-card>
-        <h2>Test 1</h2>
-      </app-card>
-    </a>
-    <a href="something-different">
-      <app-card>
-        <h2>Test 1</h2>
-      </app-card>
-    </a>
-    <a href="something-truc">
-      <app-card>
-      </app-card>
-    </a>
-    <a href="somethin">
-      <app-card>
-      </app-card>
-    </a>
-    <a href="somethi">
-      <app-card>
-      </app-card>
-    </a>
-    <a href="something-something">
-      <app-card>
-      </app-card>
-    </a>
-    <a href="something-something-something">
-      <app-card>
-      </app-card>
-    </a>
+  <div class="list-container" >
+      <div *ngFor="let card of menu.cards">
+        <a href={{card.link}}>
+          <app-card>
+            <h2>{{card.name}}</h2>
+            <h4>{{card.description}}</h4>
+            <img src={{card.image}}>
+          </app-card>
+        </a>
+      </div>
   </div>
 </main>
